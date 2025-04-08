@@ -2,8 +2,6 @@
 package com.miapp.mi_punto.controller;
 
 
-import com.miapp.mi_punto.model.persona;
-import com.miapp.mi_punto.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.miapp.mi_punto.model.persona;
+import com.miapp.mi_punto.service.PersonaService;
 
 @Controller
 @RequestMapping("/personas")
