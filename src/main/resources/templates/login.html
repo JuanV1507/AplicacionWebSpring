@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Registro - Renta de Servicios</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <form class="modern-form" th:action="@{/validar-login}" method="post">
+            <div class="form-title">Iniciar sesión</div>
+        
+            <div class="form-body">
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <input required name="username" placeholder="Nombre de usuario" class="form-input" type="text" />
+                    </div>
+                </div>
+        
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <input required name="password" placeholder="Contraseña" class="form-input" type="password" />
+                    </div>
+                </div>
+            </div>
+        
+            <button class="submit-button" type="submit">
+                <span class="button-text">Iniciar sesión</span>
+                <div class="button-glow"></div>
+            </button>
+        </form>
+        
+
+    </div>
+
+</body>
+
+</html>

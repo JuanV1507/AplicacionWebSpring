@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 //metodos set para asignar y get obtener valor se crean las variables
 
 @Entity
-public class persona {
+public class Persona {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
@@ -17,6 +17,7 @@ public class persona {
     private String email;
     private String telefono;
     private String direccion;
+    private String password;
 
     public Long getId() {
         return id;
@@ -64,6 +65,12 @@ public class persona {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     

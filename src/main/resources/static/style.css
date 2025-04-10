@@ -1,157 +1,66 @@
-:root {
-    --primary: #0077cc;
-    --primary-dark: #005fa3;
-    --primary-light: rgba(0, 119, 204, 0.1);
-    --success: #10b981;
-    --text-main: #1e293b;
-    --text-secondary: #64748b;
-    --bg-input: #f8fafc;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #007BFF, #00B4D8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.card {
+  background-color: #ffffff10;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 2px solid #ffffff20;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #ffffff20;
+}
+
+.card h2 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
   }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #004b8d, #0077cc);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-  
-  .form-container {
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .modern-form {
-    width: 100%;
-    padding: 24px;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .form-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--text-main);
-    margin-bottom: 24px;
-    text-align: center;
-  }
-  
-  .input-group {
-    margin-bottom: 16px;
-  }
-  
-  .input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .form-input {
-    width: 100%;
-    height: 42px;
-    padding: 0 36px;
-    font-size: 14px;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    background: var(--bg-input);
-    color: var(--text-main);
-    transition: all 0.2s ease;
-  }
-  
-  .form-input::placeholder {
-    color: var(--text-secondary);
-  }
-  
-  .input-icon {
-    position: absolute;
-    left: 12px;
-    width: 16px;
-    height: 16px;
-    color: var(--text-secondary);
-    pointer-events: none;
-  }
-  
-  .password-toggle {
-    position: absolute;
-    right: 12px;
-    background: none;
-    border: none;
-    color: var(--text-secondary);
-    cursor: pointer;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .eye-icon {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .submit-button {
-    position: relative;
-    width: 100%;
-    height: 42px;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    overflow: hidden;
-  }
-  
-  .button-glow {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
-  }
-  
-  .submit-button:hover {
-    background: var(--primary-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 119, 204, 0.3);
-  }
-  
-  .submit-button:hover .button-glow {
-    transform: translateX(100%);
-  }
-  
-  .form-footer {
-    margin-top: 16px;
-    text-align: center;
-    font-size: 13px;
-  }
-  
-  .login-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-  }
-  
-  .login-link span {
-    color: var(--primary);
-    font-weight: 500;
-  }
-  
-  .login-link:hover span {
-    color: var(--primary-dark);
-  }
-  
-  /* Responsive */
-  @media (max-width: 480px) {
-    .form-container {
-      padding: 0 10px;
-    }
-  
-    .modern-form {
-      padding: 20px;
-    }
-  }
-  
+}

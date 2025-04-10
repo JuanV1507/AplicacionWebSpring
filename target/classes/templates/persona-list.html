@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
+
 <html>
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Usuarios</title>
     </head>
     <body>
-        <div>TODO write content</div>
-        
+        <h1>Lista de Usuarios</h1>
+        <a th:href="@{/personas/Nuevo}">Crear Usuario</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo Electronico</th>
+                    <th>Telefono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="p : ${personas}">
+                    <td th:text="${p.id}"></td>
+                    <td th:text="${p.nombre}"></td>
+                    <td th:text="${p.apellido}"></td>
+                    <td th:text="${p.email}"></td>
+                    <td th:text="${p.telefono}"></td>
+                    <td>
+                        <a th:href="@{'/personas/editar/' + ${p.id}}">Editar</a> |
+                        <a th:href="@{'/personas/eliminar/' + ${p.id}}">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
     </body>
 </html>

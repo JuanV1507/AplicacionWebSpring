@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Persona</title>
+</head>
+<form th:action="@{/personas}" th:object="${persona}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <label>Nombre:</label>
+    <input type="text" th:field="*{nombre}" required>
+
+    <label>Apellido:</label>
+    <input type="text" th:field="*{apellido}" required>
+
+    <label>Email:</label>
+    <input type="email" th:field="*{email}" required>
+
+    <label>Teléfono:</label>
+    <input type="text" th:field="*{telefono}" required>
+    
+    <button type="submit">Guardar</button>
+</form>
+
+</body>
 </html>
